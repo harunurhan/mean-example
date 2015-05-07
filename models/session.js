@@ -1,5 +1,5 @@
-var moongose = require('moongose');
-var Schema = moongose.schema;
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 var sessionSchema = new Schema({
 	day: Number,
 	date: Date,
@@ -7,4 +7,4 @@ var sessionSchema = new Schema({
 	movie: {type: Schema.Types.ObjectId, ref:'Movie'},
 	seats: [String]
 });
-module.exports = moongose.model('Session',sessionSchema);
+module.exports = mongoose.model('Session',sessionSchema);

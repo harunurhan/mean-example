@@ -15,10 +15,11 @@ router.route('/sessions').post(function (req, res) {
 
 //retrieve sessions
 router.route('/sessions').get(function (req, res) {
-	Session.find().exec(function (err, users) {
+	Session.find().exec(function (err, data) {
 		if(err) {
 			return res.send(err);
 		}
-		res.json(users);
+		res.json(data);
 	});
 });
+module.exports = router;

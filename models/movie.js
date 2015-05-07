@@ -1,5 +1,5 @@
-var moongose = require('moongose');
-var Schema = moongose.schema;
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 var movieSchema = new Schema({
 	title: String,
 	releaseYear: String,
@@ -7,4 +7,4 @@ var movieSchema = new Schema({
 	genre: String,
 	language: String
 });
-module.exports = moongose.model('Movie',movieSchema);
+module.exports = mongoose.model('Movie',movieSchema);
