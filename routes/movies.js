@@ -33,9 +33,9 @@ router.route('/movies/:id').put(function (req, res) {
 			movie[property] = req.body[property];
 		});
 		movie.save(function(err) {
-      	if (err) {
-        	return res.send(err);
-      	}
+	      	if (err) {
+	        	return res.send(err);
+	      	}
  		res.json({ message: 'Movie updated' });
     	});
 	});

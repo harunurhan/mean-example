@@ -39,7 +39,7 @@
 				<!-- LOOP OVER THE MOVIES IN $scope.movies -->
 				<div class="checkbox" ng-repeat="movie in movies">
 					<label>
-						<input type="checkbox" ng-click="deleteTodo(movie._id)"> {{ movie.title }}
+						<input type="checkbox" ng-click="deleteMovie(movie._id)"> {{ movie.title }}
 					</label>
 				</div>
 
@@ -53,11 +53,15 @@
 					<div class="form-group">
 
 						<!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
-						<input type="text" class="form-control input-lg text-center" placeholder="Put data here" ng-model="formData.text">
+						<input type="text" class="form-control input-lg text-center" placeholder="Title" ng-model="formData.title">
+						<input type="text" class="form-control input-lg text-center" placeholder="Release Year" ng-model="formData.releaseYear">
+						<input type="text" class="form-control input-lg text-center" placeholder="Director" ng-model="formData.director">
+						<input type="text" class="form-control input-lg text-center" placeholder="Genre" ng-model="formData.genre">
+						<input type="text" class="form-control input-lg text-center" placeholder="Langugage" ng-model="formData.language">
 					</div>
 
-					<!-- createToDo() WILL CREATE NEW MOVIES -->
-					<button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()">Add</button>
+					<!-- createMovie() WILL CREATE NEW MOVIES -->
+					<button type="submit" class="btn btn-primary btn-lg" ng-click="createMovie()">Add</button>
 				</form>
 			</div>
 		</div>
