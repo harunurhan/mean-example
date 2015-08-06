@@ -4,5 +4,5 @@ This is simple project used as part of some Software Engineering and Computer Ne
 
 ### TODO:
 
-- Implement routes for Sessions.
-- Add create, delete, update Session support to Angular app.
+- Delete session related code and files
+- Use mocha for testing
