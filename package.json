@@ -1,6 +1,6 @@
 {
-  "name": "secn-project",
-  "version": "0.0.0",
+  "name": "mean-example",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
