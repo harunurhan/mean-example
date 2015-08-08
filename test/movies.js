@@ -1,16 +1,18 @@
-var should = require('should');
-var request = require('supertest');
-var mongoose = require('mongoose');
-var config = require('./config');
+const should = require('should');
+const request = require('supertest');
+const config = require('../config');
 describe('Routing', function(){
-	before(function(done) {
-		mongoose.connect(config.db);	
-		done();
-	});
-
 	describe('Movies', function() {
-		it('should', function(done) {
-			//test something!
+		it('should GET correctly', function(done) {
+			request('http://localhost:8000')
+			   	.get('/api/movies')
+				.expect(200)
+		 		.end(function(err, res) {
+					if (err) {
+						return done(err);
+					}
+					done();
+			});		
 		});
 	});
 
