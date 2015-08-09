@@ -19,7 +19,7 @@ router.route('/movies').post(function (req, res) {
 		if(err) {
 			return res.send(err);
 		}
-		res.json({message: 'New movie added'});
+		res.json({message: 'New movie added', _id: movie._id});
 	});
 });
 
